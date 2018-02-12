@@ -1,0 +1,43 @@
+{
+  "swagger": {
+    "info": {
+      "description": "Hackathon-Ready-Pack API Documentation",
+      "version": "1.0.0",
+      "title": "Node Express TSOA"
+    },
+    "schemes": [
+      "http",
+      "https"
+    ],
+    "tags": [
+      {
+        "name": "System",
+        "description": "System/Authentication APIs"
+      }
+    ],
+    "securityDefinitions": {
+      "JWT": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    },
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "outputDirectory": "./server-src",
+    "entryFile": "./server-src/app.ts",
+    "basePath": "/api"
+  },
+  "routes": {
+    "basePath": "/api",
+    "entryFile": "./server-src/app.ts",
+    "routesDir": "./server-src",
+    "middleware": "express",
+    "middlewareTemplate": "custom-template.ts",
+    "authenticationModule": "./server-src/middlewares/security/Passport.ts"
+  }
+}

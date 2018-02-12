@@ -1,0 +1,6 @@
+node_modules
+config/default.yaml
+config/production.yaml
+.idea
+.vscode
+server-build

@@ -1,0 +1,30 @@
+{
+	"basePath": "/api",
+	"consumes": [
+		"application/json"
+	],
+	"definitions": {},
+	"info": {
+		"description": "Hackathon-Ready-Pack API Documentation",
+		"version": "1.0.0",
+		"title": "Node Express TSOA"
+	},
+	"paths": {},
+	"produces": [
+		"application/json"
+	],
+	"swagger": "2.0",
+	"securityDefinitions": {
+		"JWT": {
+			"type": "apiKey",
+			"name": "Authorization",
+			"in": "header"
+		}
+	},
+	"tags": [
+		{
+			"name": "System",
+			"description": "System/Authentication APIs"
+		}
+	]
+}
