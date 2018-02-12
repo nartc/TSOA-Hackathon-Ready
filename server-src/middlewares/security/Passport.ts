@@ -10,4 +10,6 @@ export const authenticateUser = (passport: PassportStatic) => {
     };
 };
 
-export const expressAuthentication = authenticate('jwt', {session: false});
+export function expressAuthentication(strategy: string) {
+    return authenticate(strategy, {session: false});
+}
