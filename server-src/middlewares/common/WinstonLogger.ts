@@ -1,7 +1,7 @@
-import * as config from 'config';
 import {Application} from 'express';
 import * as winston from 'winston';
 import {LoggerInstance} from 'winston';
+import {get} from 'config';
 
 export const winstonLogger: LoggerInstance = new winston.Logger();
 
@@ -9,7 +9,7 @@ process.on('unhandledRejection', (reason, p) => {
     winstonLogger.warn('Possibly Unhandled Rejection at: Promise ', p, ' reason: ', reason);
 });
 
-const level: string = process.env.LOG_LEVEL || config.get('loglevel');
+const level: string = process.env.LOG_LEVEL || get('loglevel');
 
 export function setupLogging(app: Application) {
     /**
