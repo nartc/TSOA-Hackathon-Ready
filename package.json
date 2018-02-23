@@ -14,10 +14,7 @@
     "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=development; npm install --only=dev --dev",
     "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;",
     "start-dev": "concurrently --kill-others-on-fail \"tsc -w\" \"nodemon ./server-build/index.js\"",
-    "start": "tsc && npm run swagger-copy && node ./server-build/index.js",
-    "clean-swagger": "rimraf ../code-with-cause-web/src/app/swagger-api",
-    "swagger-client": "npm run clean-swagger && swagger-codegen generate -i https://codewithcause.herokuapp.com/api/docs/swagger.json -o ../code-with-cause-web/src/app/swagger-api -l typescript-angular -c ./swagger-config.json",
-    "swagger-client-dev": "npm run clean-swagger && swagger-codegen generate -i http://localhost:8080/api/docs/swagger.json -o ../code-with-cause-web/src/app/swagger-api -l typescript-angular -c ./swagger-config.json"
+    "start": "tsc && npm run swagger-copy && node ./server-build/index.js"
   },
   "author": "Chau",
   "license": "MIT",

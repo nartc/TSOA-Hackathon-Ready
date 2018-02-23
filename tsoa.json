@@ -1,7 +1,7 @@
 {
   "swagger": {
     "info": {
-      "description": "Hackathon-Ready-Pack API Documentation",
+      "description": "API Documentation",
       "version": "1.0.0",
       "title": "Node Express TSOA"
     },
