@@ -7,9 +7,12 @@ export interface IBaseRepository<T extends Document> {
 
     getByIds(ids: string[]);
 
+    getOne(value: any, queryBy: string);
+
     create(newResource: T);
 
     update(id: string, updatedResource: T);
 
     delete(id: string);
+
 }
