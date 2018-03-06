@@ -1,4 +1,4 @@
-export interface IErrorResponse {
+export interface ErrorResponse {
     thrown?: boolean,
     error?: IMongoError;
     message?: string;

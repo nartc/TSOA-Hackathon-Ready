@@ -1,12 +1,12 @@
 import {Document} from 'mongoose';
 
-export interface IBaseModel extends Document {
-    createdOn?: Date;
-    updatedOn?: Date;
+export interface Base extends Document {
+    createdAt?: Date;
+    updatedAt?: Date;
 }
 
-export interface IBaseModelVm {
-    createdOn?: Date;
-    updatedOn?: Date;
+export interface BaseVm {
+    createdAt?: Date;
+    updatedAt?: Date;
     _id?: string;
 }

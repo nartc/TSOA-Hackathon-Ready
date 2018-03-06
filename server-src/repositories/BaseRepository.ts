@@ -21,6 +21,12 @@ export class BaseRepository<T extends Document> implements IBaseRepository<T> {
         return await this._model.find({_id: {$in: ids}}).exec();
     }
 
+    async getOne(value: any, queryBy: string): Promise<T> {
+        const query = {};
+        query[queryBy] = value;
+        return await this._model.findOne(query).exec();
+    }
+
     async create(newResource: T): Promise<T> {
         return await this._model.create(newResource);
     }
